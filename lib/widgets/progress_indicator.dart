@@ -11,18 +11,8 @@ class ProgressIndicatorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Question ${currentQuestion + 1} of $totalQuestions',
-          style: TextStyle(fontSize: 18),
-        ),
-        LinearProgressIndicator(
-          value: (currentQuestion + 1) / totalQuestions,
-          backgroundColor: Colors.grey,
-          color: Colors.blue,
-        ),
-      ],
+    return LinearProgressIndicator(
+      value: (currentQuestion + 1) / totalQuestions,
     );
   }
 }
